@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(90deg, rgb(43, 43, 209), rgb(41, 188, 36));
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+button {
+  cursor: pointer;
+}
+
+.tetris {
+  background-color: rgb(11, 11, 146);
+  padding: 0.5vh;
+  border-radius: 0.5vh;
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  grid-template-rows: repeat(20, auto);
+}
+
+.tetris div {
+  height: min(4vh, 7vw);
+  width: min(4vh, 7vw);
+  background-color: rgba(97, 75, 75, 0.205);
+  border-radius: 0.3vh;
+  box-shadow: inset 2px 2px 2px rgba(128, 128, 128, 0.271);
+  box-shadow: inset -2px -2px 2px rgba(22, 87, 217, 0.271);
+}
+
+.tetris .O,
+.L,
+.I,
+.S,
+.Z,
+.J,
+.T {
+  background: white;
+}
+
+.tetris div.pupple {
+  background: rgb(146, 62, 230);
+}
+
+.tetris div.pink {
+  background: rgb(213, 35, 198);
+}
+
+.tetris div.lightBlue {
+  background: rgb(35, 210, 213);
+}
+
+.tetris div.orange {
+  background: rgb(213, 142, 35);
+}
+
+.tetris div.red {
+  background: rgb(150, 8, 8);
+}
+
+.tetris div.yellow {
+  background: rgb(188, 201, 20);
+}
+
+.tetris div.green {
+  background: rgb(8, 150, 9);
+}
+
+.tetris__score {
+  margin-left: 5vw;
+  background-color: white;
+  border-radius: 0.5vh;
+  padding: 1vh 3vh;
+  text-align: center;
+  align-self: flex-start;
+  color: rgb(11, 11, 146);
+  margin-top: 10vh;
+}
+
+.tetris__score-points {
+  padding: 2vh 0;
+  font-size: x-large;
+}
+
+.game-over {
+  position: fixed;
+  background-color: rgba(14, 11, 11, 0.5);
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.game-over__heading {
+  color: #fff;
+  text-shadow: 0 0 20px #fff;
+  padding: 4vh;
+  font-size: xx-large;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.restart {
+  padding: 25px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(139, 129, 58);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.main-restart {
+  line-height: 4vh;
+  width: 100%;
+  font-size: large;
+}
+
+.buttons {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.buttons button {
+  width: 40px;
+  height: 40px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <script type="module" src="main.js"></script>
+        <div class="tetris"></div>
+        <div class="tetris__score">
+            <div class="tetris__score-header">game score</div>
+            <div class="tetris__score-points" id="score-points">0</div>
+            <!-- <div class="next-tetro__playfield"></div> -->
+            <div class="buttons">
+                <div><button class="top-button">↩️</button></div>
+                <div><button class="left-button">⬅️</button><button class="down-button">⬇️</button><button
+                        class="right-button">➡️</button>
+                </div>
+                <div><button class="drop-button">⏬</button></div>
+            </div>
+            <button class="main-restart">restart</button>
+        </div>
+        <div class="game-over">
+            <div class="game-over__heading">Your score is <span class="game-over__score"></span> points</div>
+            <button class="restart">Restart</button>
+        </div>
+
+    </body>
+
+</html>
