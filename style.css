@@ -4,7 +4,8 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(90deg, rgb(43, 43, 209), rgb(41, 188, 36));
+  /* background: linear-gradient(90deg, rgb(43, 43, 209), rgb(41, 188, 36)); */
+  background-color: rgba(0, 0, 0, 0.933);
   user-select: none;
   display: flex;
   justify-content: center;
@@ -18,21 +19,23 @@ button {
 }
 
 .tetris {
-  background-color: rgb(11, 11, 146);
+  background-color: rgb(2, 2, 20);
   padding: 0.5vh;
   border-radius: 0.5vh;
   display: grid;
   grid-template-columns: repeat(10, auto);
   grid-template-rows: repeat(20, auto);
+  box-shadow: 0 0 12px #d2eae5, 0 0 16px #d2eae5, 0 0 20px #d2eae5,
+    0 0 26px #d2eae5, 0 0 32px #d2eae5;
 }
 
 .tetris div {
   height: min(4vh, 7vw);
   width: min(4vh, 7vw);
-  background-color: rgba(97, 75, 75, 0.205);
+  background-color: rgba(0, 0, 0, 0.867);
   border-radius: 0.3vh;
-  box-shadow: inset 2px 2px 2px rgba(128, 128, 128, 0.271);
-  box-shadow: inset -2px -2px 2px rgba(22, 87, 217, 0.271);
+  box-shadow: inset 2px 2px 2px rgba(162, 161, 161, 0.271),
+    inset -2px -2px 2px rgba(89, 90, 92, 0.271);
 }
 
 .tetris .O,
@@ -42,51 +45,68 @@ button {
 .Z,
 .J,
 .T {
-  background: white;
+  /* background: white; */
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.76);
 }
 
 .tetris div.pupple {
-  background: rgb(146, 62, 230);
+  /* background: rgb(146, 62, 230); */
+  background-color: rgba(74, 19, 129, 0.89);
+  box-shadow: 0 0 20px rgb(150, 100, 191);
 }
 
 .tetris div.pink {
-  background: rgb(213, 35, 198);
+  /* background: rgb(213, 35, 198); */
+  background: rgba(198, 30, 183, 0.49);
+  box-shadow: 0 0 20px rgb(213, 35, 198);
 }
 
 .tetris div.lightBlue {
-  background: rgb(35, 210, 213);
+  /* background: rgb(35, 210, 213); */
+  background: rgba(16, 196, 199, 0.67);
+  box-shadow: 0 0 20px rgb(35, 210, 213);
 }
 
 .tetris div.orange {
-  background: rgb(213, 142, 35);
+  background: rgba(226, 163, 69, 0.78);
+  box-shadow: 0 0 20px rgb(241, 178, 84);
 }
 
 .tetris div.red {
-  background: rgb(150, 8, 8);
+  /* background: rgb(150, 8, 8); */
+  background: rgba(139, 3, 3, 0.54);
+  box-shadow: 0 0 20px rgb(175, 53, 53);
 }
 
 .tetris div.yellow {
-  background: rgb(188, 201, 20);
+  /* background: rgb(188, 201, 20); */
+  background: rgba(227, 242, 31, 0.6);
+  box-shadow: 0 0 20px rgb(188, 201, 20);
 }
 
 .tetris div.green {
-  background: rgb(8, 150, 9);
+  /* background: rgb(8, 150, 9); */
+  background: rgba(12, 117, 12, 0.64);
+  box-shadow: 0 0 20px rgb(8, 150, 9);
 }
 
 .tetris__score {
   margin-left: 5vw;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.09);
   border-radius: 0.5vh;
-  padding: 1vh 3vh;
+  padding: 1vh 2vh;
   text-align: center;
   align-self: flex-start;
-  color: rgb(11, 11, 146);
+  color: rgb(255, 255, 255);
   margin-top: 10vh;
+  font-size: xx-large;
 }
 
 .tetris__score-points {
   padding: 2vh 0;
-  font-size: x-large;
+  font-size: larger;
+  text-shadow: 0 0 20px yellow;
 }
 
 .game-over {
@@ -104,25 +124,39 @@ button {
   color: #fff;
   text-shadow: 0 0 20px #fff;
   padding: 4vh;
-  font-size: xx-large;
   font-family: Arial;
   font-weight: bold;
+  text-align: center;
+  font-size: xxx-large;
+}
+
+.game-over__heading spam {
+  font-size: large;
 }
 
 .restart {
-  padding: 25px;
   border: none;
   border-radius: 30px;
-  background-color: rgb(139, 129, 58);
   color: #fff;
   font-size: 20px;
   cursor: pointer;
+  padding: 2vh 4vh;
+  box-shadow: 0px 0px 20px 6px rgba(139, 129, 58, 0.82);
+  background-color: rgba(59, 56, 39, 0.82);
+  font-size: xx-large;
+}
+
+.restart:hover {
+  box-shadow: 0px 0px 20px 6px rgba(216, 216, 211, 0.82);
 }
 
 .main-restart {
   line-height: 4vh;
   width: 100%;
-  font-size: large;
+  background-color: transparent;
+  border: 0;
+  font-size: xx-large;
+  color: beige;
 }
 
 .buttons {
@@ -133,6 +167,16 @@ button {
 }
 
 .buttons button {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.buttons button.drop-button {
+  width: 80%;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: white;
 }
